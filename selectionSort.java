@@ -3,7 +3,7 @@ public class selectionSort{
     // swap the position of 2 numbers of an array
     int copy = ary[num1];
     ary[num1] = ary[num2];
-    ary[num2] = num1;
+    ary[num2] = copy;
   }
   public static void selectionsort(int[] ary){
     for(int i = 1; i < ary.length+1; i++){
@@ -14,7 +14,7 @@ public class selectionSort{
       //loop through the array and get the minimum
       //if the loop has been completed n times the first n terms will be ignored
       for (int j = pos; j < ary.length; j++){
-        if (ary[pos] < min){
+        if (ary[j] < min){
           min = ary[j];
           idx = j;
         }
