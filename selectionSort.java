@@ -6,11 +6,11 @@ public class selectionSort{
     ary[num2] = copy;
   }
   public static void selectionsort(int[] ary){
+    int pos = 0;
+    int idx = 0;
     for(int i = 1; i < ary.length+1; i++){
       //setting the minimum to the previous term
       int min = ary[i-1];
-      int pos = 0;
-      int idx = 0;
       //loop through the array and get the minimum
       //if the loop has been completed n times the first n terms will be ignored
       for (int j = pos; j < ary.length; j++){
@@ -24,7 +24,7 @@ public class selectionSort{
     }
   }
   public static void main(String[] args){
-    int[] arr = new int[]{7,6,9,8,5,3,1};
+    int[] arr = new int[]{1,2,3,4,5,6,7,8};
     selectionsort(arr);
     for (int i = 0; i < arr.length; i++){
       System.out.println(arr[i]);
