@@ -7,19 +7,22 @@ public class selectionSort{
   }
   public static void selectionsort(int[] ary){
     int pos = 0;
-    int idx = 0;
     for(int i = 1; i < ary.length+1; i++){
       //setting the minimum to the previous term
       int min = ary[i-1];
+      int idx = ary[i-1];
       //loop through the array and get the minimum
       //if the loop has been completed n times the first n terms will be ignored
       for (int j = pos; j < ary.length; j++){
         if (ary[j] < min){
           min = ary[j];
           idx = j;
+          //System.out.println(idx);
         }
       }
       swap(ary, i-1, idx);
+      //System.out.println(min);
+      //System.out.println(idx);
       pos++;
     }
   }
