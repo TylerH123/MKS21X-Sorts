@@ -1,6 +1,6 @@
 public class selectionSort{
   public static void swap(int[] ary, int num1, int num2){
-    int copy = aray[num1];
+    int copy = ary[num1];
     ary[num1] = ary[num2];
     ary[num2] = num1;
   }
