@@ -1,4 +1,9 @@
 public class selectionSort{
+  public static void swap(int[] ary, int num1, int num2){
+    int copy = aray[num1];
+    ary[num1] = ary[num2];
+    ary[num2] = num1;
+  }
   public static void selectionsort(int[] ary){
     for (int i = 1; i < ary.length; i++){
       // set the min to the previous term
