@@ -6,16 +6,21 @@ public class selectionSort{
     ary[num2] = num1;
   }
   public static void selectionsort(int[] ary){
-    for(int i = 1; i < ary.length; i++){
+    for(int i = 1; i < ary.length+1; i++){
+      //setting the minimum to the previous term
       int min = ary[i-1];
       int pos = 0;
+      int idx = 0;
       //loop through the array and get the minimum
       //if the loop has been completed n times the first n terms will be ignored
       for (int j = pos; j < ary.length; j++){
         if (ary[pos] < min){
-          min = ary[pos];
+          min = ary[j];
+          idx = j;
         }
       }
+      swap(ary, i-1, idx);
+      pos++;
     }
   }
   public static void main(String[] args){
