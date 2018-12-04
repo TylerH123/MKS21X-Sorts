@@ -1,5 +1,6 @@
 public class selectionSort{
   public static void swap(int[] ary, int num1, int num2){
+    // swap the position of 2 numbers of an array
     int copy = ary[num1];
     ary[num1] = ary[num2];
     ary[num2] = num1;
@@ -8,17 +9,16 @@ public class selectionSort{
     for (int i = 1; i < ary.length; i++){
       // set the min to the previous term
       int min = ary[i-1];
-      int g = 0;
-      for (int j = 1; j < ary.length; j++){
+      int idx = 0;
+      for (int j = 0; j < ary.length; j++){
         // loop through array and replace min with a smaller number
         if (ary[j] < min){
           min = ary[j];
-          g = j;
+          idx = j;
         }
       }
       // set the previous term to the min
-      ary[g] = ary[i-1];
-      ary[i-1] = min;
+      swap(ary, i-1, idx);
     }
   }
   public static void main(String[] args){
