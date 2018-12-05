@@ -17,12 +17,10 @@ public class selectionSort{
         if (ary[j] < min){
           min = ary[j];
           idx = j;
-          //System.out.println(idx);
         }
       }
+      //swaps the previous term value with the minimum
       swap(ary, i-1, idx);
-      //System.out.println(min);
-      //System.out.println(idx);
       pos++;
     }
   }
