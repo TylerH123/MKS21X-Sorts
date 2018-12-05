@@ -10,7 +10,7 @@ public class selectionSort{
     for(int i = 1; i < ary.length+1; i++){
       //setting the minimum to the previous term
       int min = ary[i-1];
-      int idx = ary[i-1];
+      int idx = i-1;
       //loop through the array and get the minimum
       //if the loop has been completed n times the first n terms will be ignored
       for (int j = pos; j < ary.length; j++){
@@ -20,7 +20,7 @@ public class selectionSort{
           //System.out.println(idx);
         }
       }
-      swap(ary, i-1, idx-1);
+      swap(ary, i-1, idx);
       //System.out.println(min);
       //System.out.println(idx);
       pos++;
@@ -29,13 +29,13 @@ public class selectionSort{
   public static void main(String[] args){
     int[] arr = new int[]{1,2,3,4,5,6,7,8};
     int[] arr2 = new int[]{2,7,9,1,5,4,8};
-    selectionsort(arr);
+    //selectionsort(arr);
     selectionsort(arr2);
     /*for (int i = 0; i < arr.length; i++){
       System.out.println(arr[i]);
     }*/
-    for (int i = 0; i < arr.length; i++){
-      System.out.println(arr[i]);
+    for (int i = 0; i < arr2.length; i++){
+      System.out.println(arr2[i]);
     }
   }
 }
