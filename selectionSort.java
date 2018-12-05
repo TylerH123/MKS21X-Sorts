@@ -20,7 +20,7 @@ public class selectionSort{
           //System.out.println(idx);
         }
       }
-      swap(ary, i-1, idx);
+      swap(ary, i-1, idx-1);
       //System.out.println(min);
       //System.out.println(idx);
       pos++;
@@ -28,7 +28,12 @@ public class selectionSort{
   }
   public static void main(String[] args){
     int[] arr = new int[]{1,2,3,4,5,6,7,8};
+    int[] arr2 = new int[]{2,7,9,1,5,4,8};
     selectionsort(arr);
+    selectionsort(arr2);
+    /*for (int i = 0; i < arr.length; i++){
+      System.out.println(arr[i]);
+    }*/
     for (int i = 0; i < arr.length; i++){
       System.out.println(arr[i]);
     }
