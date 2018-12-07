@@ -5,7 +5,7 @@ public class Sorts{
     ary[num1] = ary[num2];
     ary[num2] = copy;
   }
-  public static void selectionsort(int[] ary){
+  public static void selectionSort(int[] ary){
     int pos = 0;
     for(int i = 1; i < ary.length+1; i++){
       //setting the minimum to the previous term
@@ -28,7 +28,7 @@ public class Sorts{
     int[] arr = new int[]{1,2,3,4,5,6,7,8};
     int[] arr2 = new int[]{2,7,9,1,5,4,8};
     //selectionsort(arr);
-    selectionsort(arr2);
+    selectionSort(arr2);
     /*for (int i = 0; i < arr.length; i++){
       System.out.println(arr[i]);
     }*/
