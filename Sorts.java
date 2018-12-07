@@ -24,6 +24,14 @@ public class Sorts{
       pos++;
     }
   }
+  public static void bubbleSort(int[] ary){
+    boolean sorted = false;
+    while (!sorted){
+      for (int i = 0; i < ary.length; i++){
+        
+      }
+    }
+  }
   public static void main(String[] args){
     int[] arr = new int[]{1,2,3,4,5,6,7,8};
     int[] arr2 = new int[]{2,7,9,1,5,4,8};
