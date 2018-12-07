@@ -26,9 +26,12 @@ public class Sorts{
   }
   public static void bubbleSort(int[] ary){
     boolean sorted = false;
+    //loop through array if its not sorted
     while (!sorted){
-      for (int i = 0; i < ary.length; i++){
-        
+      for (int i = 0; i < ary.length-1; i++){
+        if (ary[i] > ary[i+1]){
+
+        }
       }
     }
   }
