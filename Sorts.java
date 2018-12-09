@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Sorts{
   public static void swap(int[] ary, int num1, int num2){
     // swap the position of 2 numbers of an array
@@ -27,8 +29,8 @@ public class Sorts{
   public static void bubbleSort(int[] ary){
     boolean sorted = false;
     //loop through array if its not sorted
+    int count = 0;
     while (!sorted){
-      int count = 0;
       if (count == ary.length - 1){
         sorted = true;
       }
@@ -38,8 +40,11 @@ public class Sorts{
           if (ary[i] > ary[i+1]){
             swap(ary, i, i+1);
             count = 0;
+            System.out.println(Arrays.toString(ary));
           }
-          count++;
+          else{
+            count++;
+          }
         }
       }
     }
@@ -48,12 +53,16 @@ public class Sorts{
     int[] arr = new int[]{1,2,3,4,5,6,7,8};
     int[] arr2 = new int[]{2,7,9,1,5,4,8};
     //selectionsort(arr);
-    selectionSort(arr2);
+    //selectionSort(arr2);
     /*for (int i = 0; i < arr.length; i++){
       System.out.println(arr[i]);
     }*/
-    for (int i = 0; i < arr2.length; i++){
-      System.out.println(arr2[i]);
-    }
+    //for (int i = 0; i < arr2.length; i++){
+    //  System.out.println(arr2[i]);
+    //}
+    bubbleSort(arr2);
+    //for (int i = 0; i < arr2.length; i++){
+    //  System.out.println(arr2[i]);
+    //}
   }
 }
