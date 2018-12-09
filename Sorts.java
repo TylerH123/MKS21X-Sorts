@@ -36,7 +36,7 @@ public class Sorts{
         sorted = true;
       }
       else{
-      //if the array is in order, count will be 1 less than the length and will set sorted to true
+      //if the array is in order, count will be 1 less than the length and the if statement will not trigger
         count = ary.length - 1;
         for (int i = 0; i < ary.length-1; i++){
           if (ary[i] > ary[i+1]){
