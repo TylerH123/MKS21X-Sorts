@@ -29,9 +29,17 @@ public class Sorts{
     //loop through array if its not sorted
     while (!sorted){
       int count = 0;
-      for (int i = 0; i < ary.length-1; i++){
-        if (ary[i] > ary[i+1]){
-
+      if (count == ary.length - 1){
+        sorted = true;
+      }
+      else{
+      //if the array is in order, count will be 1 less than the length and will set sorted to true
+        for (int i = 0; i < ary.length-1; i++){
+          if (ary[i] > ary[i+1]){
+            swap(ary, i, i+1);
+            count = 0;
+          }
+          count++;
         }
       }
     }
