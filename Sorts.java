@@ -23,6 +23,7 @@ public class Sorts{
       }
       //swaps the previous term value with the minimum
       swap(ary, i-1, idx);
+      System.out.println(Arrays.toString(ary));
       pos++;
     }
   }
@@ -36,14 +37,12 @@ public class Sorts{
       }
       else{
       //if the array is in order, count will be 1 less than the length and will set sorted to true
+        count = ary.length - 1;
         for (int i = 0; i < ary.length-1; i++){
           if (ary[i] > ary[i+1]){
             swap(ary, i, i+1);
-            count = 0;
+            count--;
             System.out.println(Arrays.toString(ary));
-          }
-          else{
-            count++;
           }
         }
       }
@@ -61,8 +60,5 @@ public class Sorts{
     //  System.out.println(arr2[i]);
     //}
     bubbleSort(arr2);
-    //for (int i = 0; i < arr2.length; i++){
-    //  System.out.println(arr2[i]);
-    //}
   }
 }
