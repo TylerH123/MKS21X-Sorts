@@ -28,6 +28,7 @@ public class Sorts{
     boolean sorted = false;
     //loop through array if its not sorted
     while (!sorted){
+      int count = 0;
       for (int i = 0; i < ary.length-1; i++){
         if (ary[i] > ary[i+1]){
 
