@@ -44,4 +44,14 @@ public class Sorts{
       }
     }
   }
+  public static void insertionSort(int[] ary){
+    for (int i = 0; i < ary.length; i++){
+      //copy of the current num
+      int current = ary[i];
+      //loop through the sorted portion of the array to determine where to place the current num
+      for (int j = i; j > 0; j--){
+
+      }
+    }
+  }
 }
