@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Sorts{
   public static void swap(int[] ary, int num1, int num2){
     // swap the position of 2 numbers of an array
@@ -50,19 +52,25 @@ public class Sorts{
       int current = ary[i];
       //loop through the sorted portion of the array to determine where to place the current num
       for (int j = i-1; j >= 0; j--){
-        //if current is smaller than all the numbers, then j = 0, which means it has to be the first element
-        if (j == 0){
-          ary[0] = current;
-        }
         //if the current num is bigger than the num at index j is shifted down and current replaces that num at j
         if (current > ary[j]){
           ary[j+1] = current;
+          j = -1;
         }
         //if the current number is less than the num at index j then shift the numbers down
         else{
           ary[j+1] = ary[j];
         }
+        //if current is smaller than all the numbers, then j = 0, which means it has to be the first element
+        if (j == 0){
+          ary[0] = current;
+        }
       }
+      System.out.println(Arrays.toString(ary));
     }
+  }
+  public static void main(String[] args){
+    int[] ary = new int[]{7,8,1,4,2,3,5};
+    insertionSort(ary);
   }
 }
