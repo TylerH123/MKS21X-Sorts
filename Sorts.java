@@ -66,7 +66,7 @@ public class Sorts{
           ary[0] = current;
         }
       }
-      System.out.println(Arrays.toString(ary));
+      //System.out.println(Arrays.toString(ary));
     }
   }
   /*public static void main(String[] args){
