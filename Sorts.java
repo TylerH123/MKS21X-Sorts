@@ -45,12 +45,18 @@ public class Sorts{
     }
   }
   public static void insertionSort(int[] ary){
-    for (int i = 0; i < ary.length; i++){
+    for (int i = 1; i < ary.length; i++){
       //copy of the current num
       int current = ary[i];
       //loop through the sorted portion of the array to determine where to place the current num
-      for (int j = i; j > 0; j--){
-
+      for (int j = i-1; j >= 0; j--){
+        if (current > ary[j]){
+          ary[j+1] = current;
+        }
+        //if the current number is less than the num at index j then shift the numbers down
+        else{
+          ary[j+1] = ary[j];
+        }
       }
     }
   }
