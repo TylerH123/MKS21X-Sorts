@@ -70,7 +70,7 @@ public class Sorts{
     }
   }
   /*public static void main(String[] args){
-    int[] ary = new int[]{7,8,1,4,2,3,5};
+    int[] ary = new int[]{7,8,1,99,300,10,20,100,4,2,3,5};
     insertionSort(ary);
   }*/
 }
