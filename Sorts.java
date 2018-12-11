@@ -69,8 +69,8 @@ public class Sorts{
       System.out.println(Arrays.toString(ary));
     }
   }
-  public static void main(String[] args){
+  /*public static void main(String[] args){
     int[] ary = new int[]{7,8,1,4,2,3,5};
     insertionSort(ary);
-  }
+  }*/
 }
