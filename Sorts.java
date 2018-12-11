@@ -50,6 +50,11 @@ public class Sorts{
       int current = ary[i];
       //loop through the sorted portion of the array to determine where to place the current num
       for (int j = i-1; j >= 0; j--){
+        //if current is smaller than all the numbers, then j = 0, which means it has to be the first element
+        if (j == 0){
+          ary[0] = current;
+        }
+        //if the current num is bigger than the num at index j is shifted down and current replaces that num at j
         if (current > ary[j]){
           ary[j+1] = current;
         }
